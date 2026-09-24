@@ -1,11 +1,9 @@
 .bemutatkozas{
     padding: 25px;
-    background-color: blue;
-    width: 33%;
+    background-color: rgba(0, 94, 23, 0.5);
     color: white;
 }
-.teszt{
-    padding: 25px;
-    background-color: black;
-    width: 33%;
+.col{
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
