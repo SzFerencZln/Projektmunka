@@ -1,0 +1,11 @@
+.bemutatkozas{
+    padding: 25px;
+    background-color: blue;
+    width: 33%;
+    color: white;
+}
+.teszt{
+    padding: 25px;
+    background-color: black;
+    width: 33%;
+}

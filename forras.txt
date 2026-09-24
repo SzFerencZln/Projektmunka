@@ -32,9 +32,6 @@ Szeretnéd eladni az autódat? Hozd létre hirdetésedet, mutasd be járművedet
 Mutasd be jól az autódat
 A részletes adatok, jó minőségű fényképek és pontos leírás segítenek abban, hogy a vásárlók könnyebben megismerjék az autódat.
 
-Rólunk
-Az autóvásárlás új élménye
-Célunk, hogy az autókeresés egyszerű, átlátható és kellemes folyamat legyen.
 
 Olyan platformot építünk, ahol az autók mellett a fontos információk is megfelelő hangsúlyt kapnak. Így a vásárlók könnyebben tájékozódhatnak, az eladók pedig egyszerűbben mutathatják be járműveiket.
 
