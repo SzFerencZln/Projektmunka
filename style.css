@@ -1,17 +1,66 @@
+body{
+    background-color: #f6f3ec;
+}
 .bemutatkozas{
     padding: 25px;
-    background-color: rgba(139, 139, 139, 0.25);
+    background-color: #f6f3ec;
     color: white;
+    border-bottom: 3px solid #1b1f23;
+    padding-left: 300px;
+    padding-right: 900px;
 }
 .col{
     padding-top: 25px;
     padding-bottom: 25px;
 }
 .keszlet{
-    width: 75%;
+    padding-top: 25px;
+    width: 70%;
     margin: auto;
-    background-color: rgba(139, 139, 139, 0.25);
+    background-color: #f6f3ec;
 }
 h1, p{
     color: black;
 }
+.navbar{
+    background: #f6f3ec;
+    border-bottom: 3px solid #1b1f23;
+}
+.marka{
+    font-weight:1000;
+    font-size: x-large;
+    color: #b5502e;
+}
+.card{
+    border: 2px solid #1b1f23;
+    height: 460px;
+}
+.car-body{
+    border-top: 2px solid #1b1f23;
+}
+.card-img-top{
+    border-bottom: 2px solid #1b1f23;
+}
+.card-text{
+    float: left;
+    padding-left: 25px;
+}
+.card-title{
+    font-weight: bolder;
+}
+.btn{
+    margin-left: 30%;
+    display: inline;
+    background-color: #b5502e;
+    color: #f6f3ec;
+}
+.btn:hover{
+    background-color: #5c6b47;
+}
+#ar{
+    color: #b5502e;
+    font-weight: 750;
+    font-size: xx-large;
+}
+/*--ink:#1b1f23; --paper:#f6f3ec; --line:#1b1f23;
+    --rust:#b5502e; --olive:#5c6b47; --panel:#fffdf8;*/
