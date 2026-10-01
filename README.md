@@ -4,5 +4,5 @@ A weboldal autóvásárlásról fog szólni, itt fogod megtalálni BMW, SKODA, �
 ## Modeljeink
 
 1. VOLVO EC40, EX60, V60, és XC40 autóink
-2. BMW
-3. SKODA
+2. BMW M3, M4, M5 és i4 autóink
+3. SKODA Octavia Kombi, Superb Kombi, Karoq és Kodiaq autóink
