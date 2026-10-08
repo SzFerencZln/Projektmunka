@@ -8,6 +8,10 @@ footer{
     padding-left: 300px;
     padding-top: 35px;
 }
+.sajat-modal {
+    width: 625px;
+    max-width: 90%;
+}
 .bemutatkozas{
     padding: 25px;
     background-color: #f6f3ec;
