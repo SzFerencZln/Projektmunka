@@ -1,6 +1,13 @@
 body{
     background-color: #f6f3ec;
 }
+footer{
+    height: 100px;
+    border-bottom: 3px solid #1b1f23;
+    border-top: 3px solid #1b1f23;
+    padding-left: 300px;
+    padding-top: 35px;
+}
 .bemutatkozas{
     padding: 25px;
     background-color: #f6f3ec;
@@ -39,9 +46,6 @@ h1, p{
 .card-body{
     border-top: 2px solid #1b1f23;
 }
-.card-img-top{
-    border-bottom: 2px solid #1b1f23;
-}
 .card-text{
     float: left;
     padding-left: 25px;
@@ -59,17 +63,18 @@ h1, p{
     background-color: #5c6b47;
 }
 .kereses{
-    border-bottom: 2px solid #1b1f23;
+    border-bottom: 3px solid #1b1f23;
     width: 100%;
     padding-bottom: 35px;
     padding-top: 35px;
     padding-left: 300px;
     padding-right: 600px;
 }
-#ar{
-    color: #b5502e;
-    font-weight: 750;
-    font-size: xx-large;
+.keresesmezo{
+    width: 150px;
+}
+.gomb{
+    margin: 0px;
 }
 .ar{
     color: #b5502e;
@@ -78,6 +83,18 @@ h1, p{
 }
 .modelek{
     font-size: 20px;
+}
+.bmw{
+    height: 275px;
+}
+.skoda{
+    height: 375px;
+}
+.volvo{
+    height: 375px;
+}
+.volkswagen{
+    height: 400px;
 }
 /*--ink:#1b1f23; --paper:#f6f3ec; --line:#1b1f23;
     --rust:#b5502e; --olive:#5c6b47; --panel:#fffdf8;*/
