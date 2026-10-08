@@ -13,12 +13,7 @@ A weboldal autóvásárlásról fog szólni, itt fogod megtalálni BMW, SKODA, V
 - Szép galéria választék
 - 10 év garancia elektromos autókra 
 - 5 év garancia benzines, dízeles és hibrid autókra
-- 
--
--
--
--
--
-
+- Autóbeszámítás lehetséges
+- Lízingre is van lehetőség
 
 Célunk hogy minőségi autókat adjunk el. 
