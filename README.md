@@ -8,4 +8,17 @@ A weboldal autóvásárlásról fog szólni, itt fogod megtalálni BMW, SKODA, V
 3. SKODA Octavia Kombi RS, Fabia Essence, Karoq SportLine és Kodiaq RS autóink
 4. VOLKSWAGEN Polo, Golf, Passat Variant és Taigo autóink
 
+## Amit ajánlunk
+
+- Szép galéria választék
+- 10 év garancia elektromos autókra 
+- 5 év garancia benzines, dízeles és hibrid autókra
+- 
+-
+-
+-
+-
+-
+
+
 Célunk hogy minőségi autókat adjunk el. 
