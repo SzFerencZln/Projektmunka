@@ -44,8 +44,9 @@ h1, p{
     color: #b5502e;
 }
 .card{
-    border: 2px solid #1b1f23;
+    /*border: 2px solid #1b1f23;*/
     height: 500px;
+    display: flex;
 }
 .card-body{
     border-top: 2px solid #1b1f23;
@@ -91,6 +92,10 @@ h1, p{
 }
 .bmw{
     height: 275px;
+    z-index: 1;
+    position: relative;
+    align-self: center;
+    /*background-color: red;*/
 }
 .skoda{
     height: 375px;
