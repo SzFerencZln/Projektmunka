@@ -8,11 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2bc1280ab1.js" crossorigin="anonymous"></script>
+    <style>
+        .navbar{
+            padding-left: 200px;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand py-3">
-        <div class="container d-flex justify-content-between">
+        <div class="container-fluid d-flex justify-content-between">
             <p class="marka">EliteDrive Autó</p>
         </div>
     </nav>
@@ -21,28 +26,33 @@
     </div>
     <div class="kereses">
         <h1>Szűrés</h1>
-        <form class="d-flex" role="search">
-            <input class="form-control me-2 keresesmezo" type="search" placeholder="Keresés" aria-label="Search">
-            <button class="btn btn-light gomb" type="button">Szűrés</button>
+        <form class="d-flex keresesmezo" role="search">
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Szűrés">
+            <datalist id="datalistOptions">
+                <option value="BWM">
+                <option value="SKODA">
+                <option value="VOLVO">
+                <option value="VOLKSWAGEN">
+            </datalist>
+            <button class="btn btn-light gomb" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
     <div class="keszlet">
         <div class="container">
             <h1 class="ar">BMW</h1>
-            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-5">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
+            <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
+                <div class="cols">
+                    <div class="card" style="width: 20rem;">
                         <img src="Pics/BMWi4bgremoved.png" class="card-img-top bmw" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW i4</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Elektromos</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-charging-station"></i> Elektromos</p>
                             <p class="card-text ar">21 530 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi1">
-                                Megnézem<i class="fa-solid fa-car"></i>
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
-                            
                         </div>
                     </div>
                 </div>
@@ -90,17 +100,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card" style="width: 20rem;">
                         <img src="Pics/BMWM3bgremoved.png" class="card-img-top bmw" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW M3</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">38 998 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi2">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -149,17 +159,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card" style="width: 20rem;">
                         <img src="Pics/BMWM4bgremoved.png" class="card-img-top bmw" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW M4</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">34 898 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi3">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -210,17 +220,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card" style="width: 20rem;">
                         <img src="Pics/BMWM5bgremoved.png" class="card-img-top bmw" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW M5</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Plug-in hibrid</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Plug-in hibrid</p>
                             <p class="card-text ar">53 568 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi4">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -271,17 +281,17 @@
             </div>
             <h1 class="ar">SKODA</h1>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-5">
-                <div class="col">
-                    <div class="card skoda" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card skoda" style="width: 20rem;">
                         <img src="Pics/SkodaFabiaEssence.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">SKODA Fabia Essence</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">7 479 040 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi5">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -333,17 +343,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card skoda" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card skoda" style="width: 20rem;">
                         <img src="Pics/SkodaKaroqSportline.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">SKODA Karoq SportLine</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Gázolaj</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Gázolaj</p>
                             <p class="card-text ar">13 540 760 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi6">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -394,17 +404,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card skoda" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card skoda" style="width: 20rem;">
                         <img src="Pics/SkodaKodiaqRS.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">SKODA Kodiaq RS</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">21 628 160 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi7">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -454,17 +464,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card skoda" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card skoda" style="width: 20rem;">
                         <img src="Pics/SkodaOctaviaCombiRS.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">SKODA Octavia Combi RS</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">19 149 120 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi8">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -519,17 +529,17 @@
             </div>
             <h1 class="ar">VOLVO</h1>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-5">
-                <div class="col">
-                    <div class="card volvo" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volvo" style="width: 20rem;">
                         <img src="Pics/volvoEC40.avif" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO EC40</h2>
-                            <p class="card-text">2027</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Elektromos</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2027</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-charging-station"></i> Elektromos</p>
                             <p class="card-text ar">19 170 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#kocsi9">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -579,18 +589,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card volvo" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volvo" style="width: 20rem;">
                         <img src="Pics/volvoEX60.avif" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO EX60</h2>
-                            <p class="card-text">2027</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Elektromos</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2027</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-charging-station"></i> Elektromos</p>
                             <p class="card-text ar">24 990 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                 data-bs-target="#kocsi10">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -641,18 +651,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card volvo" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volvo" style="width: 20rem;">
                         <img src="Pics/volvoV60.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO V60</h2>
-                            <p class="card-text">2027</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Plug-in hybrid</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2027</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Plug-in hybrid</p>
                             <p class="card-text ar">22 470 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                 data-bs-target="#kocsi11">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -703,18 +713,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card volvo" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volvo" style="width: 20rem;">
                         <img src="Pics/volvoXC40.avif" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO XC40</h2>
-                            <p class="card-text">2027</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Mild hybrid</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2027</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Mild hybrid</p>
                             <p class="card-text ar">15 450 001 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                 data-bs-target="#kocsi12">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -768,18 +778,18 @@
             </div>
             <h1 class="ar">VOLKSWAGEN</h1>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1 g-5">
-                <div class="col">
-                    <div class="card volkswagen" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volkswagen" style="width: 20rem;">
                         <img src="Pics/vw_golf.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h2 class="card-title modelek">VOLKSWAGEN Golf</h2><br>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <h2 class="card-title modelek">VOLKSWAGEN Golf</h2>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">11 055 365 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                 data-bs-target="#kocsi13">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -829,18 +839,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card volkswagen" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volkswagen" style="width: 20rem;">
                         <img src="Pics/vw_passat_variant.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLKSWAGEN Passat Variant</h2>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">18 047 990 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                 data-bs-target="#kocsi14">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -889,18 +899,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card volkswagen" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volkswagen" style="width: 20rem;">
                         <img src="Pics/vw_polo.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h2 class="card-title modelek">VOLKSWAGEN Polo</h2><br>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <h2 class="card-title modelek">VOLKSWAGEN Polo</h2>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">6 990 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                 data-bs-target="#kocsi15">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -949,18 +959,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card volkswagen" style="width: 18rem;">
+                <div class="cols">
+                    <div class="card volkswagen" style="width: 20rem;">
                         <img src="Pics/vw_taigo.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h2 class="card-title modelek">VOLKSWAGEN Taigo</h2><br>
-                            <p class="card-text">2026</p>
-                            <p class="card-text">0 km</p>
-                            <p class="card-text">Benzin</p>
+                            <h2 class="card-title modelek">VOLKSWAGEN Taigo</h2>
+                            <p class="card-text"><i class="fa-solid fa-calendar"></i> 2026</p>
+                            <p class="card-text"><i class="fa-solid fa-gauge"></i> 0 km</p>
+                            <p class="card-text"><i class="fa-solid fa-gas-pump"></i> Benzin</p>
                             <p class="card-text ar">9 190 000 Ft</p><br><br><br><br>
                             <button type="button" class="btn btn-light" data-bs-toggle="modal"
                                 data-bs-target="#kocsi16">
-                                Megnézem
+                                Megnézem <i class="fa-solid fa-car"></i>
                             </button>
                         </div>
                     </div>
@@ -1008,14 +1018,16 @@
                             </div>
                         </div>
                     </div>
-                </div>>
+                </div>
             </div>
         </div>
     </div>
-    <footer>Valami random szoveg</footer>
+    <footer>
+        <i class="fa-regular fa-copyright"></i>2026 <strong>EliteDrive</strong>. Minden jog fenntartva
+        <p><strong>Elérhetőség: szokob.ferenc@elitedrive.com</strong></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
