@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteDrive autóvásárlás</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2bc1280ab1.js" crossorigin="anonymous"></script>
+    <style>
+        .navbar {
+            padding-left: 130px;
+        }
+        nav ul li{
+            display: inline-block;
+            padding-left: 25px;
+        }
+        nav ul li a{
+            text-decoration: none;
+        }
+        a:hover{
+            color: #5c6b47;
+        }
+        .sikeres{
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            align-items: center;
+            height: 649px;
+            padding-top: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand py-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <ul>
+                <li><a href="index.html" class="marka">EliteDrive Autó</a></li>
+                <li><a href="foglalas.html" class="marka">Tesztvezetés</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="bemutatkozas">
+        <h1>Az autóvásárlás új élménye minőségi új autókkal.</h1>
+    </div>
+    <div class="idopont" id="foglalas">
+        <div class="foglalas">
+            <form method="post" id="tesztvezetesForm">
+                <h1 class="marka">Tesztvezetés időpontfoglalás</h1>
+                <div class="bal">
+                    <div class="mb-3">
+                        <label for="teljesnev" class="form-label">Teljes Név</label>
+                        <input type="text" class="form-control" id="teljesnev" placeholder="Teljes Név" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailcim" class="form-label">E-mail Cím</label>
+                        <input type="email" class="form-control" id="emailcim" placeholder="pelda@elitedrive.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipusok">Modellek</label>
+                        <select class="form-control" id="tipusok" name="tipusok" required>
+                            <option value="" selected disabled>Válasszon típust!</option>
+                            <option value="bmw-i4">BMW i4</option>
+                            <option value="bmw-m3">BMW M3</option>
+                            <option value="bmw-m4">BMW M4</option>
+                            <option value="bmw-m5">BMW M5</option>
+                            <option value="skoda-fabia">Skoda Fabia Essence</option>
+                            <option value="skoda-karoq">Skoda Karoq SportLine</option>
+                            <option value="skoda-kodiaq">Skoda Kodiaq RS</option>
+                            <option value="skoda-octavia">Skoda Octavia Combi RS</option>
+                            <option value="volvo-ec40">Volvo EC40</option>
+                            <option value="volvo-ex60">Volvo EX60</option>
+                            <option value="volvo-v60">Volvo V60</option>
+                            <option value="volvo-xc40">Volvo XC40</option>
+                            <option value="volkswagen-golf">Volkswagen Golf</option>
+                            <option value="volkswagen-passat">Volkswagen Passat Variant</option>
+                            <option value="volkswagen-polo">Volkswagen Polo</option>
+                            <option value="volkswagen-taigo">Volkswagen Taigo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="jobb">
+                    <div class="mb-3">
+                        <label for="idopont" class="form-label">Időpont</label>
+                        <input type="date" class="form-control" id="idopont" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Egyéb információ</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Egyéb információ a foglalással kapcsolatban"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-light" onclick="jelentkezes()">Jelentkezés</button>
+            </form>
+        </div>
+    </div>
+    <div class="sikeres" id="sikeres" style="display: none;">
+        <h1 class="marka">Sikeres jelentkezés!</h1>
+        <button type="button" class="btn btn-light" onclick="vissza()">Vissza a jelentkezéshez</button>
+    </div>
+    <footer>
+        <i class="fa-regular fa-copyright"></i>2026 <strong>EliteDrive</strong>. Minden jog fenntartva
+        <p><strong>Elérhetőség: szokob.ferenc@elitedrive.com</strong></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

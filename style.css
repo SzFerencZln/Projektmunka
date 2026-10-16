@@ -60,7 +60,7 @@ h1, p{
     font-weight: bolder;
 }
 .btn{
-    margin-left: 25%;
+    
     display: inline;
     justify-content: center;
     background-color: #b5502e;
@@ -81,7 +81,7 @@ h1, p{
     width: 250px;
 }
 .gomb{
-    margin: 0px;
+    margin-left: 25%;
 }
 .ar{
     color: #b5502e;
@@ -92,6 +92,17 @@ h1, p{
 .modelek{
     font-size: 20px;
     text-align: center;
+}
+.foglalas{
+    padding-top: 25px;
+    width: 50%;
+    margin: auto;
+    background-color: #f6f3ec;
+    height: 649px;
+}
+.idopont{
+    margin: auto;
+    width: 70%;
 }
 .bmw{
     height: 375px;
