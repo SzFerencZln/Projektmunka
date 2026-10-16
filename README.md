@@ -16,4 +16,14 @@ A weboldal autóvásárlásról fog szólni, itt fogod megtalálni BMW, SKODA, V
 - Autóbeszámítás lehetséges
 - Lízingre is van lehetőség
 
-Célunk hogy minőségi autókat adjunk el. 
+Célunk hogy minőségi autókat adjunk el.
+
+## Tesztvezetés
+
+Nálunk tesztvezetésre is van lehetőség! 
+
+Ha megtetszett egy autó, jöjjön el és próbálja ki!
+
+- Ingyenes lehetőség
+- Előzetes regisztráció szükséges
+- Összes autóinkat kilehet próbálni
