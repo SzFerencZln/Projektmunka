@@ -44,6 +44,11 @@ h1, p{
     font-size: x-large;
     color: #b5502e;
 }
+.figyelem{
+    font-weight:1000;
+    font-size: x-large;
+    color: #a00000;
+}
 .card{
     /*border: 2px solid #1b1f23;*/
     height: 500px;
