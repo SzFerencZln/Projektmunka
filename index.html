@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/2bc1280ab1.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="catalog-page">
+<body class="catalog-page dark-theme">
     <nav class="navbar navbar-expand py-3" aria-label="Fő navigáció">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <ul>
@@ -24,16 +24,17 @@
     </header>
     <section class="kereses" aria-labelledby="filter-title">
         <h1 id="filter-title">Szűrés</h1>
-        <form class="d-flex keresesmezo" role="search" aria-label="Autómárka szűrése">
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Márka kiválasztása" aria-label="Autómárka">
+        <form class="d-flex keresesmezo" id="autoSearchForm" role="search" aria-label="Autó keresése">
+            <input class="form-control" type="search" list="datalistOptions" id="exampleDataList" placeholder="Márka vagy modell keresése" aria-label="Márka vagy modell">
             <datalist id="datalistOptions">
                 <option value="BMW">
                 <option value="SKODA">
                 <option value="VOLVO">
                 <option value="VOLKSWAGEN">
             </datalist>
-            <button class="btn btn-light" type="button" aria-label="Keresés"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+            <button class="btn btn-light" type="submit" aria-label="Keresés"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
         </form>
+        <p class="search-status" id="searchStatus" role="status" aria-live="polite" hidden></p>
     </section>
     <main class="keszlet" id="autok">
         <div class="container">
@@ -1064,6 +1065,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

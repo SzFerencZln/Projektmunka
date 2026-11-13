@@ -22,8 +22,13 @@ body {
 }
 
 .catalog-page {
-    background: #dfe4da;
-    color: #18201f;
+    background: #111816;
+    color: #f7f3ee;
+}
+
+.dark-theme {
+    background: #111816;
+    color: #f7f3ee;
 }
 
 footer {
@@ -39,13 +44,13 @@ footer p {
     margin-bottom: 0;
 }
 
-.catalog-page footer {
+.dark-theme footer {
     border-color: #a9bd8e;
     background: #18201f;
     color: #f7f3ee;
 }
 
-.catalog-page footer p {
+.dark-theme footer p {
     color: rgba(247, 243, 238, 0.76);
 }
 
@@ -74,7 +79,7 @@ footer p {
     letter-spacing: -0.05em;
 }
 
-.catalog-page .bemutatkozas h1 {
+.dark-theme .bemutatkozas h1 {
     color: #f7f3ee;
 }
 
@@ -89,7 +94,7 @@ footer p {
     padding-bottom: 34px;
     width: 100%;
     margin: auto;
-    background-color: #dfe4da;
+    background-color: #111816;
 }
 
 .keszlet .container {
@@ -113,21 +118,21 @@ h1, p {
     z-index: 10;
 }
 
-.catalog-page .navbar {
+.dark-theme .navbar {
     padding: 1rem max(1.25rem, calc((100vw - 1280px) / 2));
     background: #18201f;
     border-bottom: 3px solid #a9bd8e;
 }
 
-.catalog-page .navbar .marka {
+.dark-theme .navbar .marka {
     color: #e5a181;
 }
 
-.catalog-page .navbar .marka:hover {
+.dark-theme .navbar .marka:hover {
     color: #a9bd8e;
 }
 
-.catalog-page nav ul {
+.dark-theme nav ul {
     gap: 2rem;
 }
 
@@ -182,11 +187,11 @@ nav ul li a {
 
 .keszlet .auto-card {
     height: 470px !important;
-    border: 0;
+    border: 1px solid rgba(169, 189, 142, 0.18);
     border-radius: 8px;
-    background: #18201f;
+    background: #141b19;
     color: #f7f3ee;
-    box-shadow: 0 14px 30px rgba(23, 27, 31, 0.18);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
 }
 
 .card {
@@ -219,9 +224,9 @@ nav ul li a {
     height: 220px !important;
     padding: 1.25rem;
     object-fit: contain;
-    background-color: #e7e9e3;
-    background-image: linear-gradient(135deg, transparent 49.7%, rgba(23, 27, 31, 0.035) 50%, transparent 50.3%), linear-gradient(45deg, transparent 49.7%, rgba(23, 27, 31, 0.025) 50%, transparent 50.3%);
-    border-bottom: 4px solid var(--olive);
+    background-color: #27322e;
+    background-image: linear-gradient(135deg, transparent 49.7%, rgba(247, 243, 238, 0.025) 50%, transparent 50.3%), linear-gradient(45deg, transparent 49.7%, rgba(247, 243, 238, 0.02) 50%, transparent 50.3%);
+    border-bottom: 4px solid #a9bd8e;
 }
 
 .card-body {
@@ -241,7 +246,7 @@ nav ul li a {
     padding: 1rem 1.15rem 1.15rem;
     gap: 0.25rem;
     border-top: 0;
-    background: #18201f;
+    background: #141b19;
     color: #f7f3ee;
 }
 
@@ -327,7 +332,7 @@ nav ul li a {
     font-size: clamp(1.5rem, 3vw, 2.3rem);
 }
 
-.catalog-page .kereses h1 {
+.dark-theme .kereses h1 {
     color: #f7f3ee;
 }
 
@@ -339,15 +344,44 @@ nav ul li a {
 }
 
 .catalog-page .keresesmezo .form-control {
-    background: #e7e9e3;
-    color: #18201f;
+    border-color: #56645a;
+    background: #202a27;
+    color: #f7f3ee;
+    color-scheme: dark;
+}
+
+.catalog-page .keresesmezo .form-control::placeholder {
+    color: #aab4aa;
+    opacity: 1;
+}
+
+.catalog-page .keresesmezo .form-control:focus {
+    border-color: #a9bd8e;
+    box-shadow: 0 0 0 0.2rem rgba(169, 189, 142, 0.25);
 }
 
 .catalog-page .keresesmezo .btn {
+    flex: 0 0 48px;
+    width: 48px;
     border-radius: 0 12px 12px 0;
+    border: 1px solid #a9bd8e;
     background: #a9bd8e;
     color: #18201f;
     box-shadow: none;
+}
+
+.catalog-page .keresesmezo .btn:hover {
+    border-color: #d3dfc5;
+    background: #d3dfc5;
+    color: #18201f;
+    transform: none;
+    box-shadow: none;
+}
+
+.catalog-page .search-status {
+    width: min(100%, 320px);
+    margin: 0.75rem 0 0;
+    color: #f2a08d;
 }
 
 .gomb {
@@ -390,47 +424,184 @@ nav ul li a {
 }
 
 .foglalas {
-    padding-top: 25px;
-    width: 50%;
+    padding-top: 0;
+    width: 100%;
     margin: auto;
-    background-color: var(--paper);
+    background-color: transparent;
     height: auto;
 }
 
 .booking-panel {
     padding: 2rem 1.5rem;
-    border: 1px solid var(--line);
-    border-radius: 22px;
-    box-shadow: 0 12px 28px rgba(23, 27, 31, 0.08);
+    border: 1px solid rgba(169, 189, 142, 0.3);
+    border-radius: 8px;
+    background: #18201f;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
 }
 
 .booking-form {
     display: block;
 }
 
+.booking-form h1 {
+    margin-bottom: 1.5rem;
+    color: #e5a181;
+    font-size: 1.7rem;
+}
+
+.booking-form .form-label,
+.booking-form label {
+    color: #f7f3ee;
+}
+
+.booking-page .booking-form .form-control {
+    border: 1px solid #56645a;
+    border-radius: 6px;
+    background: #202a27;
+    color: #f7f3ee;
+    color-scheme: dark;
+}
+
+.booking-page .booking-form .form-control::placeholder {
+    color: #aab4aa;
+    opacity: 1;
+}
+
+.booking-page .booking-form select.form-control option {
+    background: #202a27;
+    color: #f7f3ee;
+}
+
+.booking-page .booking-form .form-control:focus {
+    border-color: #a9bd8e;
+    box-shadow: 0 0 0 0.2rem rgba(169, 189, 142, 0.25);
+}
+
+.booking-page .booking-form .btn,
+.booking-page .success-panel .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.75rem;
+    border: 1px solid #a9bd8e;
+    border-radius: 4px;
+    background: #a9bd8e;
+    color: #18201f;
+    box-shadow: none;
+}
+
+.booking-page .booking-form .btn:hover,
+.booking-page .success-panel .btn:hover {
+    border-color: #d3dfc5;
+    background: #d3dfc5;
+    color: #18201f;
+    box-shadow: none;
+}
+
+.booking-main {
+    display: flex;
+    min-height: calc(100vh - 300px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2.5rem 1.25rem;
+}
+
 .success-panel {
     padding: 4rem 1rem;
-    border-radius: 22px;
-    background: rgba(255,255,255,0.45);
+    border: 1px solid rgba(169, 189, 142, 0.3);
+    border-radius: 8px;
+    background: #18201f;
+    color: #f7f3ee;
+}
+
+.booking-page #sikeres {
+    width: min(100%, 680px);
+    margin: auto;
+    text-align: center;
+    padding: 3rem 1.5rem;
+}
+
+.booking-page #sikeres h1 {
+    color: #e5a181;
 }
 
 .idopont {
     margin: auto;
-    width: 70%;
+    width: min(100%, 980px);
 }
 
 .modal-content {
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(27, 31, 35, 0.14);
+    overflow: hidden;
+    border: 1px solid rgba(169, 189, 142, 0.36);
+    border-radius: 8px;
+    background: #18201f;
+    color: #f7f3ee;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42);
+}
+
+.modal-content h1,
+.modal-content h2,
+.modal-content h3,
+.modal-content p,
+.modal-content th,
+.modal-content td,
+.modal-content label {
+    color: #f7f3ee;
+}
+
+.modal-content .modal-title {
+    color: #e5a181;
+}
+
+.modal-content a {
+    color: #e5a181;
+}
+
+.modal-content a:hover {
+    color: #f2c0a7;
+}
+
+.modal-content .figyelem {
+    color: #f2a08d;
+}
+
+.modal-content .table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #f7f3ee;
+    --bs-table-border-color: rgba(169, 189, 142, 0.28);
+    color: #f7f3ee;
 }
 
 .modal-header {
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid rgba(169, 189, 142, 0.3);
+    background: #202a27;
 }
 
 .modal-footer {
-    border-top: 1px solid var(--line);
+    border-top: 1px solid rgba(169, 189, 142, 0.3);
+    background: #202a27;
+}
+
+.modal-content .btn-close {
+    filter: invert(1) grayscale(1) brightness(1.8);
+    opacity: 0.85;
+}
+
+.modal-content .btn-close:hover {
+    opacity: 1;
+}
+
+.modal-content .modal-footer .btn {
+    border: 1px solid #a9bd8e;
+    border-radius: 4px;
+    background: #a9bd8e;
+    color: #18201f;
+    box-shadow: none;
+}
+
+.modal-content .modal-footer .btn:hover {
+    background: #d3dfc5;
+    color: #18201f;
 }
 
 .form-control {
@@ -470,11 +641,11 @@ nav ul li a {
         padding-left: 15px;
     }
 
-    .catalog-page .navbar {
+    .dark-theme .navbar {
         padding: 0.85rem 1rem;
     }
 
-    .catalog-page nav ul {
+    .dark-theme nav ul {
         gap: 1rem;
     }
 
@@ -492,7 +663,11 @@ nav ul li a {
     }
 
     .foglalas {
-        width: 90%;
+        width: 100%;
+    }
+
+    .booking-page .idopont {
+        width: 100%;
     }
 }
 /*--ink:#1b1f23; --paper:#f6f3ec; --line:#1b1f23;
