@@ -8,32 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2bc1280ab1.js" crossorigin="anonymous"></script>
-    <style>
-        .navbar {
-            padding-left: 130px;
-        }
-
-        nav ul li {
-            display: inline-block;
-            padding-left: 25px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #5c6b47;
-        }
-    </style>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand py-3">
+<body class="catalog-page">
+    <nav class="navbar navbar-expand py-3" aria-label="Fő navigáció">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <ul>
                 <li><a href="index.html" class="marka">EliteDrive Autó</a></li>
@@ -41,28 +19,28 @@
             </ul>
         </div>
     </nav>
-    <div class="bemutatkozas">
+    <header class="bemutatkozas">
         <h1>Az autóvásárlás új élménye minőségi új autókkal.</h1>
-    </div>
-    <div class="kereses">
-        <h1>Szűrés</h1>
-        <form class="d-flex keresesmezo" role="search">
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Szűrés">
+    </header>
+    <section class="kereses" aria-labelledby="filter-title">
+        <h1 id="filter-title">Szűrés</h1>
+        <form class="d-flex keresesmezo" role="search" aria-label="Autómárka szűrése">
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Márka kiválasztása" aria-label="Autómárka">
             <datalist id="datalistOptions">
-                <option value="BWM">
+                <option value="BMW">
                 <option value="SKODA">
                 <option value="VOLVO">
                 <option value="VOLKSWAGEN">
             </datalist>
-            <button class="btn btn-light" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="btn btn-light" type="button" aria-label="Keresés"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
         </form>
-    </div>
-    <div class="keszlet">
+    </section>
+    <main class="keszlet" id="autok">
         <div class="container">
             <h1 class="ar">BMW</h1>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
                 <div class="cols">
-                    <div class="card" style="width: 20rem;">
+                    <div class="card auto-card">
                         <img src="Pics/BMWi4bgremoved.png" class="card-img-top bmw" alt="BMW i4" title="BMW i4">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW i4</h2>
@@ -83,7 +61,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="auto1">BMW i4</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal1"
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -123,7 +101,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card" style="width: 20rem;">
+                    <div class="card auto-card">
                         <img src="Pics/BMWM3bgremoved.png" class="card-img-top bmw" alt="BMW M3" title="BMW M3">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW M3</h2>
@@ -185,7 +163,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card" style="width: 20rem;">
+                    <div class="card auto-card">
                         <img src="Pics/BMWM4bgremoved.png" class="card-img-top bmw" alt="BMW M4" title="BMW M4">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW M4</h2>
@@ -249,7 +227,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card" style="width: 20rem;">
+                    <div class="card auto-card">
                         <img src="Pics/BMWM5bgremoved.png" class="card-img-top bmw" alt="BMW M5" title="BMW M5">
                         <div class="card-body">
                             <h2 class="card-title modelek">BMW M5</h2>
@@ -313,7 +291,7 @@
             <h1 class="ar">SKODA</h1>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
                 <div class="cols">
-                    <div class="card skoda" style="width: 20rem;">
+                    <div class="card auto-card skoda-card">
                         <img src="Pics/SkodaFabiaEssence.png" class="card-img-top" alt="SKODA FABIA"
                             title="SKODA FABIA">
                         <div class="card-body">
@@ -379,7 +357,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card skoda" style="width: 20rem;">
+                    <div class="card auto-card skoda-card">
                         <img src="Pics/SkodaKaroqSportline.png" class="card-img-top" alt="SKODA KAROQ"
                             title="SKODA KAROQ">
                         <div class="card-body">
@@ -444,7 +422,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card skoda" style="width: 20rem;">
+                    <div class="card auto-card skoda-card">
                         <img src="Pics/SkodaKodiaqRS.png" class="card-img-top" alt="SKODA KODIAQ" title="SKODA KODIAQ">
                         <div class="card-body">
                             <h2 class="card-title modelek">SKODA Kodiaq RS</h2>
@@ -507,7 +485,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card skoda" style="width: 20rem;">
+                    <div class="card auto-card skoda-card">
                         <img src="Pics/SkodaOctaviaCombiRS.png" class="card-img-top" alt="SKODA OCTAVIA"
                             title="SKODA OCTAVIA">
                         <div class="card-body">
@@ -576,7 +554,7 @@
             <h1 class="ar">VOLVO</h1>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
                 <div class="cols">
-                    <div class="card volvo" style="width: 20rem;">
+                    <div class="card auto-card volvo-card">
                         <img src="Pics/volvoEC40.avif" class="card-img-top" alt="VOLVO EC40" title="VOLVO EC40">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO EC40</h2>
@@ -638,7 +616,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card volvo" style="width: 20rem;">
+                    <div class="card auto-card volvo-card">
                         <img src="Pics/volvoEX60.avif" class="card-img-top" alt="VOLVO EX60" title="VOLVO EX60">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO EX60</h2>
@@ -701,7 +679,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card volvo" style="width: 20rem;">
+                    <div class="card auto-card volvo-card">
                         <img src="Pics/volvoV60.png" class="card-img-top" alt="VOLVO V60" title="VOLVO V60">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO V60</h2>
@@ -764,7 +742,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card volvo" style="width: 20rem;">
+                    <div class="card auto-card volvo-card">
                         <img src="Pics/volvoXC40.avif" class="card-img-top" alt="VOLVO XC40" title="VOLVO XC40">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLVO XC40</h2>
@@ -830,7 +808,7 @@
             <h1 class="ar">VOLKSWAGEN</h1>
             <div class="row row-cols-lg-4 row-cols-md-2 row-cols-1">
                 <div class="cols">
-                    <div class="card volkswagen" style="width: 20rem;">
+                    <div class="card auto-card volkswagen-card">
                         <img src="Pics/vw_golf.png" class="card-img-top" alt="VOLKSWAGEN GOLF" title="VOLKSWAGEN GOLF">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLKSWAGEN Golf</h2>
@@ -892,7 +870,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card volkswagen" style="width: 20rem;">
+                    <div class="card auto-card volkswagen-card">
                         <img src="Pics/vw_passat_variant.png" class="card-img-top" alt="VOLKSWAGEN PASSAT"
                             title="VOLKSWAGEN PASSAT">
                         <div class="card-body">
@@ -954,7 +932,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card volkswagen" style="width: 20rem;">
+                    <div class="card auto-card volkswagen-card">
                         <img src="Pics/vw_polo.png" class="card-img-top" alt="VOLKSWAGEN POLO" title="VOLKSWAGEN POLO">
                         <div class="card-body">
                             <h2 class="card-title modelek">VOLKSWAGEN Polo</h2>
@@ -1015,7 +993,7 @@
                     </div>
                 </div>
                 <div class="cols">
-                    <div class="card volkswagen" style="width: 20rem;">
+                    <div class="card auto-card volkswagen-card">
                         <img src="Pics/vw_taigo.png" class="card-img-top" alt="VOLKSWAGEN TAIGO"
                             title="VOLKSWAGEN TAIGO">
                         <div class="card-body">
@@ -1078,7 +1056,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <footer>
         <i class="fa-regular fa-copyright"></i>2026 <strong>EliteDrive</strong>. Minden jog fenntartva
         <p><strong>Elérhetőség: szokob.ferenc@elitedrive.com</strong></p>

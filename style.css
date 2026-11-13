@@ -1,129 +1,499 @@
-body{
-    background-color: #f6f3ec;
+:root {
+    --ink: #171b1f;
+    --paper: #f7f3ee;
+    --panel: #fffdfb;
+    --rust: #b55234;
+    --rust-deep: #8f3c29;
+    --olive: #5f6f4b;
+    --olive-soft: #e7ecdf;
+    --line: rgba(23, 27, 31, 0.12);
+    --shadow: rgba(20, 24, 28, 0.12);
 }
-footer{
-    height: 100px;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(180deg, #f8f5f1 0%, #f2eee8 100%);
+    color: var(--ink);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.catalog-page {
+    background: #dfe4da;
+    color: #18201f;
+}
+
+footer {
+    height: auto;
     text-align: center;
-    border-bottom: 3px solid #1b1f23;
-    border-top: 3px solid #1b1f23;
-    /*padding-left: 300px;*/
-    padding-top: 35px;
+    border-bottom: 3px solid var(--ink);
+    border-top: 3px solid var(--ink);
+    padding: 32px 20px;
+    background: rgba(255, 255, 255, 0.18);
 }
+
+footer p {
+    margin-bottom: 0;
+}
+
+.catalog-page footer {
+    border-color: #a9bd8e;
+    background: #18201f;
+    color: #f7f3ee;
+}
+
+.catalog-page footer p {
+    color: rgba(247, 243, 238, 0.76);
+}
+
 .sajat-modal {
     width: 625px;
     max-width: 90%;
 }
-.bemutatkozas{
-    padding: 25px;
-    background-color: #f6f3ec;
-    color: #b5502e;
-    border-bottom: 3px solid rgb(27, 31, 35);
-    padding-left: 200px;
-    padding-right: 300px;
+
+.bemutatkozas {
+    padding: 52px 20px 44px;
+    background: #18201f;
+    color: #f7f3ee;
+    border-bottom: 1px solid rgba(169, 189, 142, 0.35);
     margin: auto;
+    text-align: left;
 }
-.cols{
-    padding-top: 25px;
-    padding-bottom: 25px;
+
+.bemutatkozas h1 {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 110px;
+    padding-right: 80px;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -0.05em;
 }
-.keszlet{
-    padding-top: 25px;
+
+.catalog-page .bemutatkozas h1 {
+    color: #f7f3ee;
+}
+
+.cols {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+}
+
+.keszlet {
+    padding-top: 34px;
+    padding-bottom: 34px;
     width: 100%;
     margin: auto;
-    background-color: #f6f3ec;
+    background-color: #dfe4da;
 }
-h1, p{
-    color: black;
+
+.keszlet .container {
+    max-width: 1280px;
 }
-.navbar{
-    background: #f6f3ec;
-    border-bottom: 3px solid #1b1f23;
+
+.row {
+    align-items: stretch;
 }
-.marka{
-    font-weight:1000;
+
+h1, p {
+    color: var(--ink);
+}
+
+.navbar {
+    background: rgba(247, 243, 238, 0.96);
+    border-bottom: 3px solid var(--ink);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.catalog-page .navbar {
+    padding: 1rem max(1.25rem, calc((100vw - 1280px) / 2));
+    background: #18201f;
+    border-bottom: 3px solid #a9bd8e;
+}
+
+.catalog-page .navbar .marka {
+    color: #e5a181;
+}
+
+.catalog-page .navbar .marka:hover {
+    color: #a9bd8e;
+}
+
+.catalog-page nav ul {
+    gap: 2rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding-left: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.marka {
+    font-weight: 1000;
     font-size: x-large;
-    color: #b5502e;
+    color: var(--rust);
+    transition: color 0.2s ease, transform 0.2s ease;
 }
-.figyelem{
-    font-weight:1000;
+
+.marka:hover {
+    color: var(--olive);
+}
+
+.figyelem {
+    font-weight: 1000;
     font-size: x-large;
     color: #a00000;
 }
-.card{
-    /*border: 2px solid #1b1f23;*/
-    height: 500px;
-    display: flex;
-}
-.card-body{
-    border-top: 2px solid #1b1f23;
-}
-.card-text{
-    float: left;
-    padding-left: 12px;
-}
-.card-title{
-    font-weight: bolder;
-}
-.btn{
-    
-    display: inline;
-    justify-content: center;
-    background-color: #b5502e;
-    color: #f6f3ec;
-}
-.btn:hover{
-    background-color: #5c6b47;
-}
-.kereses{
-    border-bottom: 3px solid #1b1f23;
+
+.auto-card {
     width: 100%;
-    padding-bottom: 35px;
-    padding-top: 35px;
-    padding-left: 200px;
-    padding-right: 600px;
+    height: 470px !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 0;
+    border-radius: 8px;
+    background: #18201f;
+    color: #f7f3ee;
+    box-shadow: 0 14px 30px rgba(23, 27, 31, 0.18);
+    transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
-.keresesmezo{
-    width: 250px;
+
+.keszlet .auto-card {
+    height: 470px !important;
+    border: 0;
+    border-radius: 8px;
+    background: #18201f;
+    color: #f7f3ee;
+    box-shadow: 0 14px 30px rgba(23, 27, 31, 0.18);
 }
-.gomb{
-    margin-left: 25%;
+
+.card {
+    height: 440px !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(23, 27, 31, 0.10);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    background: var(--panel);
 }
-.ar{
-    color: #b5502e;
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(181, 82, 52, 0.32);
+    box-shadow: 0 18px 36px rgba(23, 27, 31, 0.14);
+}
+
+.auto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 40px rgba(23, 27, 31, 0.24);
+}
+
+.auto-card > .card-img-top {
+    flex: 0 0 220px;
+    width: 100%;
+    height: 220px !important;
+    padding: 1.25rem;
+    object-fit: contain;
+    background-color: #e7e9e3;
+    background-image: linear-gradient(135deg, transparent 49.7%, rgba(23, 27, 31, 0.035) 50%, transparent 50.3%), linear-gradient(45deg, transparent 49.7%, rgba(23, 27, 31, 0.025) 50%, transparent 50.3%);
+    border-bottom: 4px solid var(--olive);
+}
+
+.card-body {
+    border-top: 2px solid rgba(23, 27, 31, 0.14);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.35rem;
+    padding: 1.1rem 1rem 1.15rem;
+    min-height: 180px;
+    background: linear-gradient(180deg, #ffffff 0%, rgba(247, 243, 238, 0.9) 100%);
+}
+
+.auto-card .card-body {
+    min-height: 0;
+    padding: 1rem 1.15rem 1.15rem;
+    gap: 0.25rem;
+    border-top: 0;
+    background: #18201f;
+    color: #f7f3ee;
+}
+
+.auto-card .card-body > br {
+    display: none;
+}
+
+.auto-card .card-title {
+    min-height: 2.5rem;
+    margin: 0 0 0.25rem;
+    color: #fffdfb;
+    font-size: 1.18rem;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.card-text {
+    float: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    color: rgba(23, 27, 31, 0.82);
+    font-size: 0.98rem;
+}
+
+.auto-card .card-text {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: rgba(247, 243, 238, 0.76);
+    font-size: 0.88rem;
+    line-height: 1.35;
+}
+
+.auto-card .card-text i {
+    width: 1rem;
+    color: #a9bd8e;
+    text-align: center;
+}
+
+.auto-card .card-text.ar {
+    margin-top: auto;
+    padding-top: 0.45rem;
+    color: #e5a181;
+    font-size: 1.35rem;
+    line-height: 1.2;
+}
+
+.card-title {
+    font-weight: bolder;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--rust), #cc6c4d);
+    color: var(--paper);
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 18px rgba(181, 82, 52, 0.18);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, var(--olive), #778d5b);
+    color: var(--paper);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(95, 111, 75, 0.2);
+}
+
+.kereses {
+    border-bottom: 1px solid rgba(169, 189, 142, 0.35);
+    width: 100%;
+    padding: 28px max(1.25rem, calc((100vw - 1280px) / 2)) 32px;
+    background: #202a27;
+}
+
+.kereses h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+
+.catalog-page .kereses h1 {
+    color: #f7f3ee;
+}
+
+.keresesmezo {
+    width: min(100%, 320px);
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    box-shadow: 0 6px 18px rgba(23, 27, 31, 0.04);
+}
+
+.catalog-page .keresesmezo .form-control {
+    background: #e7e9e3;
+    color: #18201f;
+}
+
+.catalog-page .keresesmezo .btn {
+    border-radius: 0 12px 12px 0;
+    background: #a9bd8e;
+    color: #18201f;
+    box-shadow: none;
+}
+
+.gomb {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 72%;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+}
+
+.auto-card .gomb {
+    width: 100%;
+    margin: 0.55rem 0 0;
+    padding: 0.68rem 0.9rem;
+    border: 1px solid #a9bd8e;
+    border-radius: 4px;
+    background: #a9bd8e;
+    color: #18201f;
+    box-shadow: none;
+}
+
+.auto-card .gomb:hover {
+    border-color: #d3dfc5;
+    background: #d3dfc5;
+    color: #18201f;
+    box-shadow: none;
+}
+
+.ar {
+    color: var(--rust);
     font-weight: 750;
-    font-size: xx-large;
-    padding-left: 50px;
+    font-size: clamp(1.6rem, 2vw, 2.3rem);
+    padding-left: 0;
 }
-.modelek{
+
+.modelek {
     font-size: 20px;
     text-align: center;
 }
-.foglalas{
+
+.foglalas {
     padding-top: 25px;
     width: 50%;
     margin: auto;
-    background-color: #f6f3ec;
-    height: 649px;
+    background-color: var(--paper);
+    height: auto;
 }
-.idopont{
+
+.booking-panel {
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: 0 12px 28px rgba(23, 27, 31, 0.08);
+}
+
+.booking-form {
+    display: block;
+}
+
+.success-panel {
+    padding: 4rem 1rem;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.45);
+}
+
+.idopont {
     margin: auto;
     width: 70%;
 }
-.bmw{
-    height: 375px;
-    z-index: 1;
-    position: relative;
-    align-self: center;
-    /*background-color: red;*/
+
+.modal-content {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(27, 31, 35, 0.14);
 }
-.skoda{
-    height: 400px;
+
+.modal-header {
+    border-bottom: 1px solid var(--line);
 }
-.volvo{
-    height: 400px;
+
+.modal-footer {
+    border-top: 1px solid var(--line);
 }
-.volkswagen{
-    height: 400px;
+
+.form-control {
+    border-radius: 12px;
+    border: 1px solid var(--line);
+}
+
+.form-control:focus {
+    border-color: rgba(181, 82, 52, 0.7);
+    box-shadow: 0 0 0 0.2rem rgba(181, 82, 52, 0.15);
+}
+
+@media (max-width: 992px) {
+    .bemutatkozas h1 {
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .kereses {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .idopont {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .navbar {
+        padding-left: 15px;
+    }
+
+    .catalog-page .navbar {
+        padding: 0.85rem 1rem;
+    }
+
+    .catalog-page nav ul {
+        gap: 1rem;
+    }
+
+    .catalog-page .kereses {
+        padding: 24px 1rem 28px;
+    }
+
+    .card {
+        width: 100% !important;
+    }
+
+    .gomb {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .foglalas {
+        width: 90%;
+    }
 }
 /*--ink:#1b1f23; --paper:#f6f3ec; --line:#1b1f23;
     --rust:#b5502e; --olive:#5c6b47; --panel:#fffdf8;*/
