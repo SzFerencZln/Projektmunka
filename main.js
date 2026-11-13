@@ -70,6 +70,36 @@ if (autoSearchForm && autoSearchInput) {
     szuresAutoKatalogust();
   });
 }
+
+document.querySelectorAll(".auto-card").forEach((carCard) => {
+  const modelName = carCard.querySelector(".card-title")?.textContent.trim();
+  const detailsButton = carCard.querySelector("[data-bs-target]");
+  const modal = detailsButton && document.querySelector(detailsButton.dataset.bsTarget);
+  const modalFooter = modal?.querySelector(".modal-footer");
+
+  if (!modelName || !modalFooter || modalFooter.querySelector(".booking-link")) {
+    return;
+  }
+
+  const bookingLink = document.createElement("a");
+  bookingLink.className = "btn booking-link";
+  bookingLink.href = `foglalas.html?modell=${encodeURIComponent(modelName)}`;
+  bookingLink.setAttribute("aria-label", `Tesztvezetés foglalása: ${modelName}`);
+  bookingLink.textContent = "Tesztvezetést kérek";
+  modalFooter.prepend(bookingLink);
+});
+
+const bookingModelSelect = document.getElementById("tipusok");
+if (bookingModelSelect) {
+  const requestedModel = new URLSearchParams(window.location.search).get("modell");
+  const matchingOption = [...bookingModelSelect.options].find((option) =>
+    option.textContent.trim().toLocaleLowerCase("hu-HU") === requestedModel?.trim().toLocaleLowerCase("hu-HU")
+  );
+
+  if (matchingOption) {
+    bookingModelSelect.value = matchingOption.value;
+  }
+}
 /*
   A form required validalasa most a submit eseményen keresztul ellenorzodik, es a sikeres allapot megjelenitese utan nem reloadol az oldal.
 */
