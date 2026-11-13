@@ -1,54 +1,71 @@
 # EliteDrive Autó
 
-Az **EliteDrive Autó** egy autókereskedést bemutató weboldal, amely különböző márkák új autómodelljeit ismerteti.
+Az EliteDrive Autó egy statikus autókereskedelmi landing page, amely új autómodelleket mutat be, lehetővé teszi a keresést, valamint tesztvezetési foglalásra is alkalmas.
 
-## Amit ajánlunk
+## Leírás
 
-- Szép galéria választék
-- 10 év garancia elektromos autókra 
-- 5 év garancia benzines, dízeles és hibrid autókra
-- Autóbeszámítás lehetséges
-- Lízingre is van lehetőség
-
-Célunk hogy minőségi autókat adjunk el.
+A weboldal célja, hogy modern és letisztult felületen jelenítse meg a kínálatot, a járműveket, azok műszaki adatait és a tesztvezetési lehetőséget. A projekt HTML, CSS és JavaScript alapján készült, Bootstrap és Font Awesome segítségével.
 
 ## Funkciók
 
-- Autók böngészése márkák szerint
-- Autómodellek árainak és alapadatainak megtekintése
-- Részletes leírások és műszaki adatok megjelenítése
-- Felugró ablakok az egyes autók részleteivel
-- Külső konfigurátorok elérése
-- Tesztvezetési oldal
+- Autók megjelenítése márkánként
+- Szűrés a keresőmezőben
+- Autóadatok és árak megjelenítése
+- Részletes modal ablakok minden modellhez
+- Külső konfigurátor hivatkozások a gyártói oldalakra
+- Tesztvezetési foglalási oldal
+- Reszponzív, modern megjelenés
 
-## Modellek
+## Kínálat
 
-- VOLVO EC40, EX60, V60, és XC40 autóink
-- BMW M3, M4, M5 és i4 autóink
-- SKODA Octavia Kombi RS, Fabia Essence, Karoq SportLine és Kodiaq RS autóink
-- VOLKSWAGEN Polo, Golf, Passat Variant és Taigo autóink
+A projektben szereplő modellek több márka közül kerültek ki:
 
-## Tesztvezetés
+- Volvo: EC40, EX60, XC40
+- BMW: i4, M3, M4
+- Skoda: Octavia Kombi RS, Fabia Essence, Karoq SportLine, Kodiaq RS
+- Volkswagen: Polo, Golf, Passat Variant, Taigo
 
-Nálunk tesztvezetésre is van lehetőség! 
+## Technológia
 
-Ha megtetszett egy autó, jöjjön el és próbálja ki!
-
-- Ingyenes lehetőség
-- Előzetes regisztráció szükséges
-- Összes autóinkat kilehet próbálni
-
-## Felhasznált technológiák
-
-- HTML
-- CSS
-- Bootstrap
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 5
 - Font Awesome
+
+## Projekt struktúra
+
+```text
+Projektmunka/
+├── index.html
+├── foglalas.html
+├── main.js
+├── style.css
+├── README.md
+├── forras.txt
+├── Pics/
+│   ├── BMWi4bgremoved.png
+│   ├── BMWM3bgremoved.png
+│   ├── BMWM4bgremoved.png
+│   ├── EC40.avif
+│   ├── EX60.avif
+│   ├── volvoEC40.avif
+│   ├── volvoEX60.avif
+│   ├── volvoXC40.avif
+│   └── XC40.avif
+└── ...
+```
 
 ## Futtatás
 
 1. Töltsd le vagy klónozd a projektet.
-2. Tartsd meg az eredeti mappaszerkezetet és a képeket.
+2. A mappaszerkezetet eredeti formában hagyhatod meg.
 3. Nyisd meg az `index.html` fájlt egy böngészőben.
 
-A megfelelő megjelenéshez szükséges a `style.css` fájl és a `Pics` mappa is. A Bootstrap és a Font Awesome külső erőforrásokat használ, ezért ezek betöltéséhez internetkapcsolat szükséges.
+## Megjegyzés
+
+A megfelelő megjelenéshez szükséges a `style.css` fájl és a `Pics` mappa is. A Bootstrap és a Font Awesome külső CDN erőforrásokból töltődik be, ezért internetkapcsolat szükséges a helyes megjelenéshez.
+
+## Szerző
+
+EliteDrive Autó projektsablon és bemutató weboldal.
